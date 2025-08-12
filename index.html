@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dnyaneshwar Kale - Resume</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Style -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero container fade-in">
+    <img src="D:\html\resume\images\d.jpg" alt="Dnyaneshwar Kale" class="profile-photo" />
+    <h1>Dnyaneshwar Kale</h1>
+    <p>Data Engineer | Azure & Analytics | ETL Specialist</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/dnyaneshwar123/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    <a href="D:\html\resume\Pdf\Dnyaneshwar_Kale_Resume.pdf" class="download-btn" download>Download Resume</a>
+  </section>
+
+  <!-- Projects Dashboard Style -->
+  <section id="projects" class="container fade-in">
+    <h2>Projects</h2>
+    <div class="dashboard">
+      <div class="card">
+        <h3>Customer Service Dashboard</h3>
+        <p>Excel-based analytics dashboard showing customer insights, request types, and satisfaction scores using pivot tables and charts.</p>
+      </div>
+      <div class="card">
+        <h3>Azure ETL Pipeline</h3>
+        <p>Built scalable data pipelines using Azure Data Factory and Databricks to automate data flow from SAP to Power BI reports.</p>
+      </div>
+      <div class="card">
+        <h3>Real-Time Customs Monitor</h3>
+        <p>Live Power BI dashboard for shipment tracking integrated with Azure Logic Apps alerts and Data Lake analytics.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="container fade-in">
+    <h2>Experience</h2>
+    <h3>ETHOS HR – Azure Data Engineer</h3>
+    <p>Jan 2024 – Present | Tata Motors (JLR UK Team)</p>
+    <ul>
+      <li>Developed ETL pipelines with Azure Data Factory</li>
+      <li>Data transformation using PySpark & Databricks</li>
+      <li>Customs data dashboards using Power BI</li>
+    </ul>
+
+    <h3>John Deere – Production Engineer</h3>
+    <p>Sep 2020 – Apr 2021</p>
+    <ul>
+      <li>Led CNC operations and machine shop productivity</li>
+    </ul>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="container fade-in">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>Azure Data Factory</li>
+      <li>Databricks</li>
+      <li>SQL</li>
+      <li>Python</li>
+      <li>Power BI</li>
+      <li>Git</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container fade-in">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:dnyaneshwarkale799@gmail.com">dnyaneshwarkale799@gmail.com</a></p>
+    <p>Phone: +91-9552001075</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+    <p>Naukri.com: 
+    <a href="https://www.naukri.com/mnjuser/profile" target="_blank">
+      View My Naukri Profile
+    </a>
+  </p>
+  </section>
+
+  <footer>
+    <p>© 2025 Dnyaneshwar Kale. All rights reserved.</p>
+  </footer>
+
+  <!-- Animation Script -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.1
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+</body>
+</html>
