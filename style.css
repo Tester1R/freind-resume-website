@@ -33,7 +33,6 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #333;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -213,5 +212,6 @@ body {
   color: #94a3b8;
   font-size: 0.
 }
+
 
 
